@@ -1,0 +1,158 @@
+-- phpMyAdmin SQL Dump
+-- version 3.1.3
+-- http://www.phpmyadmin.net
+--
+-- 主机: localhost
+-- 生成日期: 2023 年 04 月 12 日 04:02
+-- 服务器版本: 5.1.32
+-- PHP 版本: 5.2.9
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- 数据库: `group49`
+--
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `commentdetail`
+--
+
+CREATE TABLE IF NOT EXISTS `commentdetail` (
+  `commentid` int(11) NOT NULL AUTO_INCREMENT,
+  `userID` int(11) NOT NULL,
+  `postID` int(11) NOT NULL,
+  `comment` varchar(255) NOT NULL,
+  `commentTime` datetime NOT NULL,
+  PRIMARY KEY (`commentid`),
+  KEY `userID` (`userID`),
+  KEY `postID` (`postID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=25 ;
+
+--
+-- 导出表中的数据 `commentdetail`
+--
+
+INSERT INTO `commentdetail` (`commentid`, `userID`, `postID`, `comment`, `commentTime`) VALUES
+(1, 1, 2, 'good', '2022-12-25 07:41:39'),
+(2, 3, 6, 'Very good.', '2022-12-25 08:30:09'),
+(3, 3, 6, 'Very good.', '2022-12-25 08:30:38'),
+(4, 3, 6, 'Nice', '2022-12-25 08:47:36'),
+(5, 1, 5, 'I like this', '2022-12-25 12:50:16'),
+(6, 3, 10, 'LOVE IT', '2022-12-25 13:03:58'),
+(7, 4, 9, 'You will get high score!', '2022-12-25 13:07:28'),
+(8, 4, 8, 'This is my favourite!', '2022-12-25 13:08:02'),
+(9, 4, 1, 'Just soso', '2022-12-25 13:08:26'),
+(12, 3, 4, 'I like this', '2022-12-26 03:03:37'),
+(13, 1, 4, 'Nice', '2022-12-26 03:24:09'),
+(14, 1, 10, 'Perfect', '2022-12-26 05:11:06'),
+(17, 4, 14, 'Nice', '2022-12-26 07:20:22'),
+(18, 4, 16, 'Nice', '2022-12-26 07:34:41'),
+(20, 4, 18, 'Nice', '2022-12-26 07:55:27'),
+(22, 7, 20, 'Nice', '2022-12-26 08:24:40'),
+(23, 7, 13, 'I like this', '2022-12-26 08:24:56'),
+(24, 7, 5, 'hate it', '2022-12-26 08:25:30');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `postinfo`
+--
+
+CREATE TABLE IF NOT EXISTS `postinfo` (
+  `postID` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `tag` varchar(100) NOT NULL,
+  `content` longtext NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `date` datetime NOT NULL,
+  `userID` int(11) NOT NULL,
+  PRIMARY KEY (`postID`),
+  KEY `userID` (`userID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+
+--
+-- 导出表中的数据 `postinfo`
+--
+
+INSERT INTO `postinfo` (`postID`, `title`, `tag`, `content`, `image`, `date`, `userID`) VALUES
+(1, '1000HP APOLLO ARROW - Full Tech Specs, Animations and 50 Photos.', 'Hypercar', 'History was made on Belle Isle during the 2022 Detroit Grand Prix. Not only was it the final race on the island before the event moves to the streets of downtown Detroit, but also the place where Chevrolet recorded its 100th Detroit Grand Prix victory thanks to the help of Team Penske’s Will Power who recorded his third Belle Isle victory and finally had a chance to go for a swim in the iconic Scott Fountain.Power almost ran away with the race as a result, but Alexander Rossi and the No. 27 NAPA AUTO PARTS/Autonation Honda nearly upended these plans with a final run for the win. Rossi would ultimately get second place but he managed to be only one second behind Power in a thrilling conclusion to racing on Belle Isle. The win comes as a result of a bold strategy by Team Penske which saw them use the alternate red tires for the final leg of the race. These tires offer more grip at first, but they lose it faster than the primary black tires. Rossi chose to run the primary black tires for the final 20 laps which are more consistent but lack the extra grip that defines the alternate red tires. ', 'upload/car-1.jpg', '2022-10-01 00:00:00', 1),
+(2, 'McLaren SENNA - Design Walkaround Gallery & Video - Amelia Concours Highlight', 'Hypercar, McLaren', 'In addition to the rolling bodies, Dodge will also be greatly expanding its roster of carbon fiber components for the Challenger. One part of this initiative is a partnership with SpeedKore, which has become well-known for its carbon fiber-sourced components. The company will build a new wave of carbon fiber components which will then be sold by Dodge to owners looking to cut some weight from their builds. For owners that have bigger wallets, Dodge will also be collaborating with Finale Speed with the latter getting the license rights from Dodge to produce full carbon fiber 1970 Charger bodies. This program will eventually expand to Roadrunner and Barracuda bodies but we get to wait a while for more information on those projects. As for the Charger bodies, they will also be offered through Direct Connection, but it’s unknown what kind of pricing we will see here, especially once all of them make their way to the catalog .\r\n\r\nIn other news, Dodge will also offer the 8HP70 eight-speed automatic (found in Scat Pack models) for all of its crate motors, with the Hellcat’s 8HP90 transmission appearing later. The addition of these two transmissions will not only add more flexibility to Dodge’s portfolio, but it’s also a nod to changing times and the fact that more racers are entering into the hobby that might not be able to drive a manual transmission.', 'upload\\car-2.jpg', '2022-10-20 10:20:17', 2),
+(3, 'Apollo Intensa Emozione at Amelia Island Concours', 'Hypercar, Arrow', 'Dodge had plenty to talk about the past few days; from the Challenger Droptop to the recently unveiled Dodge Hornet, its clear that Dodge is trying to boldly transition to a new era. But what if youre a drag racer looking to build the track-slaying monster of your dreams but want to go about things your own way? Dodge has the answer with a new wave of rolling bodies that will allow you to do just that.\r\nModifying and creating a drag racer can be a very pricey and intensive headache, but Mopars Direct Connection service aims to ease some of the stress with the availability of rolling Challenger Drag Pak bodies. These bodies are slathered in white paint, and an enterprising racer can buy one for less than $8,000. A prominent catch here is that the bodies dont have VINs, so they cannot be registered to be used legally on the road. Buyers will also have to supply their own parts, but we suspect that wont be a problem, especially with the extensive catalog of parts that Direct Connection has available.', 'upload\\car03.jpg', '2022-10-21 12:00:03', 1),
+(4, 'Ford Says Goodbye To GT With Wild 2023 Ford GT Mk IV, 67 To Be Built, Costs $1.7 Million Dollars', 'Ford, GT', 'The Ford GT was an enigma deep in the halls of the Ford Motor Company. When Ford announced that it was reviving the GT at a conference during the North American International Auto Show inside the now-demolished Joe Louis Arena, it was arguably one of the best-kept secrets in the industry, with the futuristic two-door grabbing the world’s attention. We had a chance to experience it both on the track and on the street where it proved to be a true once-in-a-lifetime experience. Sadly, the GT is going away after 2023, but Ford has prepared a final send-off model (for real this time) with the 2023 Ford GT Mk IV, which is a wild track-focused insane member of the GT family that pays homage to Ford’s vintage 1967 Le Mans racer.\r\nThe Mk IV is a track-exclusive beast, and that’s readily evident in some of the changes that Ford engineers made to make this beast into a true dragon on the raceway. The chassis is exclusive to the Mk IV, and the wheelbase has been stretched to help improve high-speed handling behavior. The bodywork has been heavily revamped, and the need not to abide by road car safety standards allowed the GT team to push the envelope regarding functional performance. The simplified headlights bleed into the bodywork while the side mirrors have been axed. The rear houses a massive rear diffuser and a massive rear wing.', 'upload\\2023-ford-gt-mk-iv-1.webp', '2022-10-26 11:00:34', 2),
+(5, 'Audi Says Adios To V10 With 2022 R8 GT Model, Most Potent R8 Variant Yet', 'Audi', 'Audis 5.2 liter V10 has been a long running staple in the R8 supercar especially after it punted the V8 out of the engine lineup several years back. But the mighty ten cylinder is also a dinosaur from an era where fuel economy was placed in the backseat and displacement and horsepower reigned supreme in the performance car scene. That means is now unable to comply with pending fuel economy regulations but Audi is sending it out now with a whimper, but a bang with the all-new 2022 Audi R8 GT.\r\nWhile the=is version of the R8 GT may seem like an all-new offering, its actually not, with the original R8 GT model making its appearance back in 2010. Back then, it received a 552 hp version of the V10 and was supposed to be a more hardcore version of the standard R8. I even had a chance to drive one (albeit briefly) before I picked up a pen and it certainly was a memorable experience. The 2022 version largely follows this same formula but it gains 40 more horses for a revised total of 602 hp while 413 lb-ft of torque helps the R8 GT blast its way to 62 mph in 3.2 seconds before topping out at 199 mph. A seven-speed dual clutch automatic is all-new and Audi claims that it was also designed to improve shift behavior.', 'upload\\Small-10325-AudiR8CoupeV10GTRWDEuropeanmodelshown.webp', '2022-12-01 14:36:32', 3),
+(8, 'Hyundaiâ€™s N Day Celebration Reveals EV Future With RN22e, N Vison 74 T', 'Hydrogen', 'We thought that Hyundai couldnt possibly find a way to outdo themselves after yesterdayâ€™s unveiling of the Ioniq 6 EV concept, but the Korean car giant has managed to prove that we were once again wrong for underestimating their capabilities because N Day revealed some very interesting things about where things are headed for Hyundais wildest sub-brand.On the surface, the RN22e might appear to b an Ioniq 6 at first glance, but look at some of its revisions and itâ€™s obvious that this is a completely different breed of Hyundai. While it has retained the Ioniq 6s basic shape, the rear doors were removed to save weight, transforming the concept into a formal coupe. The â€œRâ€ portion of its name means Rolling Laboratory,â€ and it shows thanks to some of the changes that Hyundai has made to the concept. That includes a bigger rear wing, wider fenders, as well as a large front splitter that helps generate the downforce needed to keep the concept planted in spirited driving.', 'upload/16719727961.jpg', '2022-12-25 12:53:16', 1),
+(9, 'Buick Wildcat EV Exudes Style, Previews Future Of Brandâ€™s EV Efforts', 'Showstopper, Hypercar', 'The evolution of Buick has seen the brand go through many twists and turns over the past few decades. GMâ€™s Ultium fueled revolution aims to guide Buick through its latest transformation into an all-electric brand for the future. Buick reps offered a glimpse into this new reality with the all-new Buick Wildcat EV Concept that not only looks sleek in its own right but also previews some new technologies too.The Wildcat concept first started out as a mere design sketch that happened to catch the attention of higher-ups within the company. Subsequent development work has led up to this full-size concept and it certainly draws plenty of attention to itself. The main reason for this is that itâ€™s a coupe versus an SUV-shaped vehicle that better reflects the brandâ€™s attempts here in North America to be an all utility-focused lineup of vehicles. Buick designers claim that the coupe body style allowed the Wildcat to have a more expressive yet cohesive design.That said, the coupe has a sleek profile with Buick designers opting for a look thatâ€™s simple and organic while also highlighting the clean lines that dot the front of the concept. The revamped Buick badge loses its outer circle and is now mounted on the front bumper with the grille featuring a pushed-down look that also helps widen it too. The roofline slopes gently towards the rear of the car and the taillights here blend seamlessly into the rear hatch area of the concept. The turbine-like chrome wheels took two months to produce and finish and the doors themselves feature gull-wing upper pieces to help make entry and exit easier for occupants. Buick claims that two new models will be appearing that will have design cues lifted from the Wildcat though we suspect these carryover items will be limited to the headlights and other minor items.', 'upload/16719732413.jpg', '2022-12-25 13:00:41', 3),
+(10, 'Brabus Crawler Take G-Class To New Level Of Capability, Only 15 Will b', 'Brabus, Crawler, Audi', 'Brabus and the Mercedes G-Class go together like peanut butter and jelly on a sandwich with the German tuning company producing some wild G-Class-based creations over the past several decades. However, the firm appears to have perhaps found a way to outdo even some of its crazier creations with the all-new Brabus Crawler which pushes things into uncharted territory.At first glance, the Brabus Crawler looks like the end result of spending too much time with a metal cutting saw, but this is more than a chopped-up G-CLass and thereâ€™s alot going on here. The chassis is unique to the Crawler and was built in-house by Brabus and is the first such creation to not feature a Mercedes-built factory platform. The tubular frame that replaces it also comes with front and rear portal axles and engineers even added 20 extra inches of ground clearance.\r\n\r\nPower comes from a 4.5 liter twin-turbocharged V8 that produces over 900 hp and is capable of launching the Crawler to 60 mph in 3.6 seconds before it subsequently tops out at a tire limited 100 mph. While itâ€™s not a track darling, the carbon fiber-infused sport seats certainly do a good job creating the illusion of higher speeds and the exhaust is so loud that Brabus had to actually fit it with a two-way communication system to help occupants be able to talk with each other. A digital instrument cluster is also on board, and a massive infotainment screen is standard too.\r\n\r\nBuyers looking to add a Brabus Crawler of their own to their fleet will have to act quickly. Brabus didnâ€™t detail pricing (we expect it wonâ€™t be cheap) and confirmed that only 15 of these beasts will be produced. These lucky owners will have a very stylish toy to take on trail weekends but they will need to tow it there (the Crawler is not road legal) to get the best out of it. We have included a photo gallery which can be seen below.', 'upload/16719733543.jpg', '2022-12-25 13:02:34', 3);
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `userinfo`
+--
+
+CREATE TABLE IF NOT EXISTS `userinfo` (
+  `userID` int(11) NOT NULL AUTO_INCREMENT,
+  `userName` varchar(30) NOT NULL,
+  `pw` char(32) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `admin` int(11) NOT NULL,
+  PRIMARY KEY (`userID`),
+  KEY `pw` (`pw`),
+  KEY `pw_2` (`pw`),
+  KEY `userName` (`userName`),
+  KEY `userName_2` (`userName`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+
+--
+-- 导出表中的数据 `userinfo`
+--
+
+INSERT INTO `userinfo` (`userID`, `userName`, `pw`, `email`, `admin`) VALUES
+(1, 'admin', 'kit202', '2392215479@qq.com', 1),
+(2, 'cyh', '123456', '1742226578@qq.com', 1),
+(3, 'Toby', 'Q1111111', '1237212@qq.com', 1),
+(4, 'member', 'kit202', 'yuhengc@utas.edu.au', 0),
+(7, 'lhc', 'Q1111111', 'hengc@utas.edu.au', 1);
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `votedetail`
+--
+
+CREATE TABLE IF NOT EXISTS `votedetail` (
+  `voteid` int(11) NOT NULL AUTO_INCREMENT,
+  `userID` int(11) NOT NULL,
+  `postID` int(11) NOT NULL,
+  `rating` int(11) NOT NULL,
+  `voteTime` date NOT NULL,
+  PRIMARY KEY (`voteid`),
+  KEY `postID` (`postID`),
+  KEY `userID` (`userID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=25 ;
+
+--
+-- 导出表中的数据 `votedetail`
+--
+
+INSERT INTO `votedetail` (`voteid`, `userID`, `postID`, `rating`, `voteTime`) VALUES
+(1, 1, 2, 5, '2022-12-25'),
+(2, 3, 6, 2, '2022-12-25'),
+(3, 3, 6, 3, '2022-12-25'),
+(4, 3, 6, 3, '2022-12-25'),
+(5, 1, 5, 5, '2022-12-25'),
+(6, 3, 10, 3, '2022-12-25'),
+(7, 4, 9, 5, '2022-12-25'),
+(8, 4, 8, 5, '2022-12-25'),
+(9, 4, 1, 2, '2022-12-25'),
+(12, 3, 4, 4, '2022-12-26'),
+(13, 1, 4, 5, '2022-12-26'),
+(14, 1, 10, 1, '2022-12-26'),
+(17, 4, 14, 5, '2022-12-26'),
+(18, 4, 16, 5, '2022-12-26'),
+(20, 4, 18, 4, '2022-12-26'),
+(22, 7, 20, 5, '2022-12-26'),
+(23, 7, 13, 4, '2022-12-26'),
+(24, 7, 5, 2, '2022-12-26');
