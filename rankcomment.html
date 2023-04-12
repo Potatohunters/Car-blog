@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="rankcomment.css" type="text/css" charset="utf-8"/>
+   
+    <title>Rank and comment page</title>
+</head>
+<body>
+    <div id="progress">
+        <span id="progress-value">&#x1F815;</span>
+    </div>
+    <nav class="navbar">   
+        <div class="logo">
+            <h4>Hyper</h4>
+        </div>
+        <!--Dark/light theme switch button-->
+        <div>
+            <label id="switch" class="switch">
+                    <input type="checkbox" onchange="toggleTheme()" id="slider">
+                    <span class="slider round"></span>
+            </label>  
+        </div>
+    
+        <ul class="nav-links">
+            <li><a href="Home.html" class="links">home</a></li>
+            <li><a href="Archive.html" class="links">archive</a></li>
+            <li><a href="About.html" class="links">about</a></li>
+            <li><a href="Create.html" class="links">create</a></li>
+        </ul>
+    
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>   
+     </nav>
+
+
+    <section class="blog-section">
+        <div class="blog-card">
+            <img src="picture/car-1.jpg" alt="" class="blog-image"> 
+            <h1 class="blog-title">1000HP APOLLO ARROW - Full Tech Specs, Animations and 50 Photos.</h1>
+            <p class="blog-date">&#8212 2022/10/25</p>
+            <li class="blog-tag">Hypercar</li>
+            <li class="blog-tag">Apollo</li>
+            <p class="blog-overview">A twin slice of brake-heat outlet is the entire front fender behind the wheels in contrast carbon.  External-pointing lower rocker spikes also quite fresh.  Above the mid-point of the body in profile, you see concave chiseling for a cold-air intake.  Another of those up top on the roof. Spider-like vents emerge from the central spin.</br></br> All the tail bodywork appears silky and pinned beneath the swirling airvent of main tail structure.
+                In all, it is at the top of its game. Like a meaner, longer and more cut version of the new Ford GT.
+                The carbon-fiber tub and all elements of the Gumpert have been redesigned to hit a target weight of under 1300-kgs, dry.  This piece moiunts to a chromoly spaceframe for the front and rear, and again runs an Audi RS-sourced V8 pushing obscene boost levels.</br></br>  And race componentry, of course.  The engine is a rough starting point before its major mods.  And the horsepower figures, you wonder? A new sequential transmission, top-shelf component sets and masterful Nurburgring tuning promise a big leap in pace over the Apollo S — particularly above 150-mph.  And perhaps leading  the the track-only hypercar variants of 2016.  For those favoring a more angular and proven design, watch for the next article on the updated Apollo N.
+                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate non consequatur sequi quasi consectetur sit ducimus magnam, reiciendis quaerat veritatis porro accusantium dolorum suscipit necessitatibus minus nemo. Molestiae, tempora aut.
+            </p>
+        </div>
+
+        <!-- 这里是打分和评论区域 -->
+        <div class="blog-card-comment">
+            <div class="display-comment">
+                <div class="comment-overview">
+                    <p class="username">username</p>
+                    <p class="time">commentdate</p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, cumque, repellendus, a voluptatibus in delectus sapiente unde dicta quae veritatis maiores! Eligendi in distinctio autem iure? Ab sequi facilis ipsum?
+                </div>
+                <div class="comment-overview">
+                    <p class="username">username</p>
+                    <p class="time">commentdate</p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, cumque, repellendus, a voluptatibus in delectus sapiente unde dicta quae veritatis maiores! Eligendi in distinctio autem iure? Ab sequi facilis ipsum?
+                </div>
+                <div class="comment-overview">
+                    <p class="username">username</p>
+                    <p class="time">commentdate</p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, cumque, repellendus, a voluptatibus in delectus sapiente unde dicta quae veritatis maiores! Eligendi in distinctio autem iure? Ab sequi facilis ipsum?
+                </div>
+            </div>
+
+            <div class="content">
+                <form action="#">
+                    <div class="user-details">
+                        <div class="input-box">
+                        <span class="details">Comment here</span>
+                        <input type="text" placeholder="Enter your comment" required>
+                        </div>                           
+                    </div>
+                    
+                    <div class="gender-details">
+                        <input type="radio" name="gender" id="dot-1">
+                        <input type="radio" name="gender" id="dot-2">
+                        <input type="radio" name="gender" id="dot-3">
+                        <input type="radio" name="gender" id="dot-4">
+                        <input type="radio" name="gender" id="dot-5">
+                        <span class="gender-title">Please rate this post</span>
+                        <div class="category">
+                        <label for="dot-1">
+                        <span class="dot one"></span>
+                        <span class="gender">1</span>
+                        </label>
+                        <label for="dot-2">
+                        <span class="dot two"></span>
+                        <span class="gender">2</span>
+                        </label>
+                        <label for="dot-3">
+                        <span class="dot three"></span>
+                        <span class="gender">3</span>
+                        </label>
+                        <label for="dot-4">
+                            <span class="dot four"></span>
+                            <span class="gender">4</span>
+                        </label>
+                        <label for="dot-5">
+                            <span class="dot five"></span>
+                            <span class="gender">5</span>
+                        </label>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Upload your Rating and Comment">
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </section>
+    <!-- <div class="rating-box">
+        <header>How was your experience?</header>
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+      </div> -->
+</body>
+</html>

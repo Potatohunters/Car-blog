@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Cai Yuheng    Li Haocheng   Lin Yilin    Liu Jiahao">
+    <title>About</title>
+</head>
+<link rel="stylesheet" href="About.css" type="text/css" />
+<body>
+	<div id="progress">
+        <span id="progress-value">&#x1F815;</span>
+    </div>
+    <nav class="navbar">   
+        <div class="logo">
+            <h4>Hyper</h4>
+        </div>
+        <!--Dark/light theme switch button-->
+        <div class="container">
+            <label id="switch" class="switch">
+                    <input type="checkbox" onchange="toggleTheme()" id="slider">
+                    <span class="slider round"></span>
+            </label>  
+         </div>
+    
+        <ul class="nav-links">
+            <li><a href="Home.html" class="links">home</a></li>
+            <li><a href="Archive.html" class="links">archive</a></li>
+            <li><a href="About.html" class="links">about</a></li>
+            <li><a href="Create.html" class="links">create</a></li>
+        </ul>
+    
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>   
+     </nav>
+     
+
+    <!----home section design--->
+	<section class="home" >
+		<div class="home-text">
+			<div class="slide">
+			  <h2 class="one">Hello</h2>
+			</div>
+			<h1>Here is</h1>
+			<h3>Our about page</h3>	
+		</div>
+		<div class="name">
+			<h4>Cai Yuheng 619301</h4>
+			<h4>Li Haocheng 619319</h4>
+			<h4>Lin Yilin 619281</h4>
+			<h4>Liu Jiahao 619293</h4>
+		</div>
+	</section>
+
+	<!----about section design--->
+	<section class="about" >
+		<div class="about-img">
+			<img src="picture/car-5.webp">
+		</div>
+		<div class="about-text">
+			<h2>About <span>content</span></h2>
+			<h4>Our theme</h4>
+			<p> The theme of our blog is about cars, with a focus on hypercars. 
+				Not much is known about hypercars, perhaps because of their high prices. 
+				But there's more to hypercars than just their cool looks and high prices. 
+				Each hypercar has its own unique design, containing the ideas of the designer and its own brand culture.
+				Special tailplane design, engine layout, engine performance, and aerodynamics are all worth discussing. 
+				We believe that hypercar is a combination of physics and design aesthetics, so we chose the top sports car as the topic of our blog</p>
+			<a href="#" class="btn">More About</a>
+		</div>
+
+        <div class="about-text">
+			<h4>Password policy</h4>
+			<p>Our password policy consists of three main parts. The registration password must contain at least one uppercase letter, at least one number, and at least eight characters. The password must be the same as the confirmation password.
+				To accomplish these goals, we first add the "li" tag to the HTML file, enter the required password policy into the registration box, and give it the same id. And inside it calls the "checkword" and "recheckword" methods with "onkeyup" and reads the data with "(this.value)". After that, we use regular expressions in the js file to determine whether the string has uppercase letters, whether it contains numbers, and whether it is more than eight digits. if so, add "valid" to the original" class ". Finally, set the text style of "valid" to be transparent in the css file so that the user knows that the password is valid.
+				The password policy for confirming the password is determined by comparing the data read twice” (this.value)”. If the data read twice is the same, the Confirm password label will be hidden.</p>
+			<a href="#" class="btn">More About</a>
+		</div>
+		<div class="about-img">
+			<img src="picture/car-6.webp">
+		</div>
+
+		<div class="about-img">
+			<img src="picture/car-7.webp">
+		</div>
+		<div class="about-text">			
+			<h4>Registration method</h4>
+			<p>For new user registration, we decided to animate the login form into the registration form. In this way, users can feel the interactivity of the web page when using, and can choose freely in the registration and login, rather than the stiff jump to another separate interface. Immersive experiences are important to us. The dynamic changes can also make it more interesting.</p>
+			<a href="#" class="btn">More About</a>
+		</div>
+		
+	</section>
+
+    
+	<!----service section design--->
+	<section class="services" >
+		<div class="main-text">
+			<p>Here is </p>
+			<h2><span>Our</span> Embellishments</h2>
+		</div>
+
+		<div class="services-content">
+			<div class="box">
+				<h3>Responsiveness</h3>
+				<p>We achieved that the site dynamically adapts for different browser sizes. 
+					Through grid layout auto and media function, the layout of a blog post can change with the size of the browser. 
+					When shrinking the page, if the browser is not large enough to display the content at the minimum size, the layout will be changed again, for example, from a row of four columns to a row of three columns. 
+					But on the Home page and About page, we use a one-row, two-column layout.
+					The navigation bar also uses a responsive design.
+				</p>
+				<a href="#" class="read">Read More</a>
+			</div>
+
+			<div class="box">				
+				<h3>Sticky navigation</h3>
+				<p>We use "position:fix" to keep the navigation bar anchored at the top of the page and let its top is 0 and left is 0. So when we scroll down, it position will not change and always displays at the top of our page. 
+				   To avoid other content that might overwrite the navigation content, we also set it to the highest z-index.
+				   In addition, in order to achieve responsive web pages, we also set media in the navigation bar to change the way it is displayed on pages that are too small. 
+				   In the beautify aspect, transform: translateX is also used to make it can achieve "slide into" animation effect when clicked.
+				</p>
+				<a href="#" class="read">Read More</a>
+			</div>
+
+			<div class="box">				
+				<h3>Scroll-to-top button</h3>
+				<p>When you click on it, the page is automatically pulled to the top. In the js file, we set a judgment condition, when the page position is pulled down, that is, the page position is greater than 100, the scroll up button will appear, but when the page is not pulled down, it will not appear. 
+				   Such a design is more in line with people's usage habits. 
+				   When the user clicks that button, we're going to use addEventListener and implement its content, and the page goes back to top=0</p>
+				<a href="#" class="read">Read More</a>
+			</div>
+            
+			<div class="box">				
+				<h3>Dynamic display of scroll-to-top button</h3>
+				<p>To increase interactivity, we added additional appearance styles for the scroll up button.
+				   Calculate the height of how much has the user pulled down in the js file, then use conic-gradient to convert it into a pie chart rotated around the center point, 
+				   and then set it to the background color of the button. In this way, users can more intuitively know how far they have pulled down.
+				</p>
+				<a href="#" class="read">Read More</a>
+			</div>
+
+			<div class="box">				
+				<h3>Light and dark themes</h3>
+				<p>For changing the theme color of the blog, the method we use is to store all the colors that need to be changed as a class in CSS. Create a light mode class and a dark mode class. 
+					The background color and color of the element are then called in CSS using var (). 
+					JavaScript only needs to change the light and dark classes to make the color switch</p>
+				<a href="#" class="read">Read More</a>
+			</div>
+
+			<div class="box">				
+				<h3>Full screen display mode on archive page</h3>
+				<p>In the archive page, checkbox type and label tags are added for each blog card. 
+					When the card is clicked, the full screen expansion of the card and the display of the content is achieved by the transform function in css. 
+					In addition, the transformation of each card is animated by the transition function in CSS.</p>
+				<a href="#" class="read">Read More</a>
+			</div>
+
+			
+		</div>
+	</section>
+
+	<section class="end">
+		<div class="last-text">
+			<h2>Reference list</h2>
+			<p>Ahamad, M 2019, Dark and Light theme switcher, photograph, viewed October 27, 2022, &lthttps://i.ibb.co/7JfqXxB/sunny.png&gt</p>
+			<p>Ahamad, M 2019, Dark and Light theme switcher, photograph, viewed October 27, 2022, &lthttps://i.ibb.co/FxzBYR9/night.png&gt</p>
+			<p>Burkart, T 2020, Apollo Intensa Emozione at 2020 Amelia Island Concours, photograph, viewed October 27, 2022, &lthttps://www.car-revs-daily.com/2020/03/15/apollo-intensa-emozione-at-2020-amelia-island-concours/#more-346236></p>
+			<p>Burkart, T 2016, 1000HP 2017 APOLLO ARROW - Full Tech Specs, Animations and 50 Photos, photograph, viewed October 27, 2022, &lthttps://www.car-revs-daily.com/2020/03/15/apollo-intensa-emozione-at-2020-amelia-island-concours/#more-346236></p>
+			<p>Burkart, T 2016, Lamborghini TRACK and PLAY - Telemetry VIDEO APP Is New Accessori Originali, photograph, viewed October 27, 2022, &lthttps://www.car-revs-daily.com/2016/03/28/lamborghini-track-and-play/#more-281216></p>
+			<p>Burkart, T 2017, 2018 Apollo INTENSA EMOZIONE - Shockingly Cut Hypercar is Chiron Killer, photograph, viewed October 27, 2022, &lthttps://www.car-revs-daily.com/2017/10/25/2018-apollo-intensa-emozione-shockingly-cut-hypercar-chiron-killer/></p>
+			<p>Burkart, T 2017, Never-Driven 2014 Ferrari LaFerrari Joins RM Sothebys Villa Erba 2017 Sale, photograph, viewed October 27, 2022, &lthttps://www.car-revs-daily.com/2017/04/27/never-driven-2014-ferrari-laferrari-joins-rm-sothebys-villa-erba-2017-sale/></p>
+			<p>Burkart, T 2018, 2017 Ferrari LaFerrari Aperta Expected to Earn $8 Mil at RM Sotheby's Arizona 2019, photograph, viewed October 27, 2022, &lthttps://www.car-revs-daily.com/2018/12/22/2017-ferrari-laferrari-aperta-expected-to-earn-8-mil-at-rm-sothebys-arizona-2019/#more-324347></p>
+			<p>MHC 2021, Apollo IE, the German-born hypercar, is now owned by a Hong Kong listed company,photograph,viewed October 27, 2022, &lthttps://chinessima.com/en/2021/01/apollo-ie-the-german-born-hypercar-is-now-owned-by-a-hong-kong-listed-company.html></p>
+			<p>Woyshnis, M 2020, Super Trofeo, photograph, viewed October 29, 2022, &lthttps://www.youtube.com/watch?v=YAWt-gktZqM&t=175s></p>
+			<p>Rendell, J 2021, AUTOCAR, How to develop an electric hypercar during a pandemic, photograph, viewed 31 October 2022, &lthttps://www.autocar.co.uk/car-news/industry-news-tech%2C-development-and-manufacturing/how-develop-electric-hypercar-during></p>
+			<p>Bigg, M 2018, CARBUZZ, Zenvo Will Reveal New Hardcore Hypercar At Geneva, photograph, viewed 31 October 2022, &lthttps://carbuzz.com/news/zenvo-will-reveal-new-hardcore-hypercar-at-geneva></p>
+			<p>Fowler, S 2017, AutoExpress, 'Is a 1,000bhp hypercar really relevant these days?', photograph, viewed 31 October 2022, &lthttps://www.autoexpress.co.uk/car-news/100915/is-a-1000bhp-hypercar-really-relevant-these-days></p>
+			<p>Chokhani D 2018, FIA APPROVES HYPERCAR LMP1 RULES FOR FUTURE WEC, photograph, viewed 31 October 2022, &lthttps://formularapida.net/fia-approves-hypercar-lmp1-rules-future-wec/></p>
+			<p>DELAGE HYPERCAR 2022, photograph, viewed 31 October 2022, &lthttps://uncrate.com/delage-d12-hypercar/></p>
+			<p>Viaframe,C 2022,Corbis Creative,photography,&lthttps://www.vcg.com/creative/1278845708></p>
+			<p>Burkart, T 2021, Car-Revs-Daily First Look - 2021 McLaren Artura and Elva - Double The Style & Double The Fun, photograph, viewed October 30, 2022, &lthttps://www.car-revs-daily.com/2021/05/05/car-revs-daily-first-look-2021-mclaren-artura-and-elva-double-the-style-double-the-fun/></p>
+		</div>
+	</section>
+     <script src="About.js"></script>
+</body>
+</html>

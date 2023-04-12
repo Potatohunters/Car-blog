@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <meta name="author" content="Cai Yuheng    Li Haocheng   Lin Yilin    Liu Jiahao">
+    <link rel="stylesheet" type="text/css" href="login1.css">
+</head>
+
+<body>
+    <div id="progress">
+        <span id="progress-value">&#x1F815;</span>
+    </div>
+    <nav class="navbar">   
+        <div class="logo">
+            <h4>Hyper</h4>
+        </div>
+        <!--Dark/light theme switch button-->
+        <div class="container1">
+            <label id="switch" class="switch">
+                    <input type="checkbox" onchange="toggleTheme()" id="slider">
+                    <span class="slider round"></span>
+            </label>  
+         </div>
+    
+         <ul class="nav-links">
+            <li><a href="Home.html" class="links">home</a></li>
+            <li><a href="Archive.html" class="links">archive</a></li>
+            <li><a href="About.html" class="links">about</a></li>
+            <li><a href="Create.html" class="links">create</a></li>
+        </ul>
+    
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>   
+     </nav>
+  
+  
+  
+  
+  
+  
+     <div class="container right-panel-active">
+
+        <div class="container_from container--signup">
+            <form action="#" class="from" id="from1">
+                <h2 class="from_title">Create New Account</h2>
+                <input type="text" placeholder="User" class="input" required>
+                <input type="email" placeholder="Email" class="input" required>
+                <input type="password" id="pswrd" placeholder="Password" onkeyup="checkPassword(this.value)" class="input" required>
+                <input type="password" id="pswrd2" placeholder="CheckPassword" onkeyup="recheckPassword(this.value)" class="input" required>
+                <button class="btn" id="create"  onclick="isHidden()">Create</button>
+                <input type="reset" value="RESET" id= "reset" class="reset" onclick="show()">
+                <div class="validation">
+                        <ul>
+                            <li id="upper" >At least one capital letter</li>
+                            <li id="length" >At least eight characters</li>
+                            <li id="number" >At least one number</li>
+                            <li id="recheck" >The two passwords are different</li>
+                        </ul>
+                    </div>
+            </form>
+        </div>
+
+
+
+        <div class="container_from container--signin">
+            <form action="Home.html" class="from" id="from2">
+                <h2 class="from_title">Sign In</h2>
+                <input type="email" placeholder="Email" class="input" required>
+                <input type="password" placeholder="Password" onkeyup="passWord(this.value)" class="input" required>
+                <a href="#" class="link">Forget password?</a>
+                <a href="login2.html" class="link2" target="container_from container--signup">No account?</a>
+                <input type="submit" value="Login"  class="btn">
+            </form>
+        </div>
+    
+        <div class="container_overlay">
+            <div class="overlay">
+                <div class="overlay_panel overlay--left">
+                    <button class="btn" id="signin">Direct Login</button>
+                </div>
+      
+
+                <div class="overlay_panel overlay--right">
+                    <button class="btn" id="signup">No Account</button>
+                </div>
+            </div>
+        </div>
+
+
+</body>
+<script src="login1.js"></script>
+</html>

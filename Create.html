@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post Page</title>
+    <meta name="author" content="Cai Yuheng    Li Haocheng   Lin Yilin    Liu Jiahao">
+    <link rel="stylesheet" href="Create.css">
+</head>
+<body>
+    <div id="progress">
+        <span id="progress-value">&#x1F815;</span>
+    </div>
+    <!-- site navigation -->
+    <nav class="navbar">   
+        <div class="logo">
+            <h4>Hyper</h4>
+        </div>
+        <!--Dark/light theme switch button-->
+        <div class="container">
+            <label id="switch" class="switch">
+                    <input type="checkbox" onchange="toggleTheme()" id="slider">
+                    <span class="slider round"></span>
+            </label>  
+         </div>
+    
+        <ul class="nav-links">
+            <li><a href="Home.html" class="links">home</a></li>
+            <li><a href="Archive.html" class="links">archive</a></li>
+            <li><a href="About.html" class="links">about</a></li>
+            <li><a href="Create.html" class="links">create</a></li>
+        </ul>
+    
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>   
+     </nav>
+     
+
+    <!-- main content -->
+    <form id="createform" classonsubmit="return validateForm()" method="post" action="create1.js">
+        <div class="post">
+            <div class="title">
+                <h1>Create Post Page</h1>
+                
+            </div>
+
+
+            <div class="element">
+                <table>
+                    <tr>
+                        <td><h2>Post Title</h2></td>
+                        <td><input type="text" name="title" id="ptitle" maxlength="70" placeholder="Under 70 characters"></td>
+                        <td><span class="error" id="titleErr"></span></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td><h2>Tags/ Keywords</h2></td>
+                        <td><input type="text" name="tags" id="tag" placeholder="Enter a tag or keyword"></td>
+                        <td><span class="error" id="tagsErr"></span></td>
+                    </tr>
+                </table>
+
+                <table>
+                    <tr>
+                        <td><h2>Forum</h2></td>
+                        <td>
+                            <select name="" id="selforum" >
+                            <option value="">please choose</option> 
+                            <option>General chat</option>
+                            <option>F1 Car Hardware & Development</option>
+                            <option>Aerodynamics, chassis and tyres</option>
+                            <option>Engine, transmission and controls</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>   
+
+                <div class="contitle">
+                    <h2>Post Content</h2>
+                </div>
+                <div class="contxt">
+                    <textarea name="content" id="contentext"  placeholder="cannot be empty"></textarea>
+                    <br>
+                    <span class="error" id="contentErr"></span>
+                </div>
+          
+            </div>
+            
+            <div class="button">
+                <table>
+                    <td><input type="submit" id="create" value="create"></td>
+                    <td><input type="reset" value="reset" id="reset" ></td>
+                </table>    
+            </div>
+
+        </div>
+        
+    </form>
+    
+
+
+    <script src="Create.js"></script>
+</body>
+</html>
